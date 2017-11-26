@@ -1,0 +1,48 @@
+.jumbotron {
+  text-align: center;
+  background: none;
+}
+
+.sectionLight {
+  background-color: #eceeef;
+  padding: 2rem;
+}
+
+.search-boxes {
+	background-color: #eceeef; 
+	font-weight: 30px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

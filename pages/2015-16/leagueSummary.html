@@ -1,0 +1,58 @@
+
+
+<div class="container" ng-controller="leagueSummary15_16 as teamCtrl" ng-init="teamCtrl.statistics()" >
+    
+    <div class="row">
+
+ 
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
+        <input type="text" class="form-control" placeholder="by team" ng-model="team1Search" />      
+      </div>
+    
+
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
+        <input type="text" class="form-control" placeholder="by wins" ng-model="wins" />      
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
+        <input type="text" class="form-control" placeholder="by losses" ng-model="losses" />
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
+        <input type="text" class="form-control" placeholder="by goalsScored" ng-model="goalScored" />
+      </div>
+
+
+  </div> <!--End of Row-->
+
+  <br>
+
+  <table class="table table-inverse table-hover table-sm table-condensed table-responsive"  style="text-align: center; background-color: #3B252A;">
+    <thead>
+      <tr>
+        <th  style="text-align: center;"> Team </th>
+        <th  style="text-align: center;"> Total Matches </th>
+        <th  style="text-align: center;"> draws </th>
+        <th  style="text-align: center;"> Losses </th>
+        <th  style="text-align: center;"> wins </th>
+
+        <th  style="text-align: center;"> Goals Scored </th>
+        <th  style="text-align: center;"> Goals Conceded </th>
+      </tr>
+    </thead>
+
+    <tbody ng-repeat="data in teamCtrl.jsonArr.teamss | filter:team1Search | filter:wins | filter:losses | filter:team1Search | filter:goalScored" ng-hide="epl1"">
+      
+        <td style="color:white;"> <a href="#!epl_15_16/teamDetails/{{data.t1code}}">  {{ data.team }} </a></td>
+        <td> {{ data.totalMatches }} </td>
+       <td style="color:white;"> {{ data.draws }}</td>
+        <td> {{data.losses}}</td>
+        <td> {{data.wins}} </td>
+        <td> {{ data.goalScored }}</td>
+        <td> {{data.goalsConceded}} </td>
+      </tr>
+    </tbody>    
+  </table>
+
+</div> <!--End of Container-->
+
