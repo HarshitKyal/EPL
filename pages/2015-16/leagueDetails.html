@@ -37,8 +37,8 @@
       <tr ng-repeat="match in data.matches | filter:team2Search | filter:team1Search  | filter:dateSearch" ng-hide="epl1">
         <td style="color:white;"> <a href="#!epl_15_16/matchDetails/{{match.date}}/{{match.team1.code}}/{{match.team2.code}}"> {{ data.name }} </a></td>
         <td> {{ match.date }} </td>
-       <td style="color:white;"> <a href="#!epl_15_16/teamDetails/{{match.team1.code}}"> {{ match.team1.name }}</td>
-        <td style="color:white;"> <a href="#!epl_15_16/teamDetails/{{match.team2.code}}"> {{ match.team2.name }}</td>
+       <td > <a href="#!epl_15_16/teamDetails/{{match.team1.code}}"> {{ match.team1.name }}</td>
+        <td> <a href="#!epl_15_16/teamDetails/{{match.team2.code}}"> {{ match.team2.name }}</td>
         <td>  </td>
       </tr>
     </tbody>    

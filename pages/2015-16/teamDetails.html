@@ -38,10 +38,10 @@
     <tbody ng-repeat="data in teamSpe.jsonArr.teamss | filter:matchSearch | filter:team1Search | filter:team2Search | filter:dateSearch" ng-hide="epl1">
       
         <td style="color:white;"> <a href="#!epl_15_16/matchDetails/{{data.date}}/{{data.t1code}}/{{data.t2code}}"> {{ data.name }} </a></td>
-        <td> {{ data.date }} </td>teamDetails/
+        <td> {{ data.date }} </td>  
        <td style="color:white;"> <a href="#!epl_15_16/teamDetails/{{data.t1code}}"> {{ data.t1team }}</td>
         <td>  <a href="#!epl_15_16/teamDetails/{{data.t2code}}"> {{ data.t2team }}</td>
-        <td> <td>
+       
       </tr>
     </tbody>  
   </table>
