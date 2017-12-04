@@ -1,6 +1,7 @@
 
 <div class="container" ng-init="EPL.eplData()">
 
+<h4 style="text-align: center; padding-top: 20px;">Filter Result By using Search Boxes</h4>
     <div class="row">
 
       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
@@ -35,10 +36,10 @@
 
     <tbody ng-repeat="data in EPL.datas | filter:matchSearch">
       <tr ng-repeat="match in data.matches | filter:team2Search | filter:team1Search  | filter:dateSearch" ng-hide="epl1">
-        <td style="color:white;"> <a href="#!epl_15_16/matchDetails/{{match.date}}/{{match.team1.code}}/{{match.team2.code}}"> {{ data.name }} </a></td>
+        <td style="color:white;"> <a ng-href="#!{{EPL.type}}/matchDetails/{{match.date}}/{{match.team1.code}}/{{match.team2.code}}"> {{ data.name }} </a></td>
         <td> {{ match.date }} </td>
-       <td > <a href="#!epl_15_16/teamDetails/{{match.team1.code}}"> {{ match.team1.name }}</td>
-        <td> <a href="#!epl_15_16/teamDetails/{{match.team2.code}}"> {{ match.team2.name }}</td>
+       <td > <a ng-href="#!{{EPL.type}}/teamDetails/{{match.team1.code}}"> {{ match.team1.name }}</td>
+        <td> <a ng-href="#!{{EPL.type}}/teamDetails/{{match.team2.code}}"> {{ match.team2.name }}</td>
         <td>  </td>
       </tr>
     </tbody>    

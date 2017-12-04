@@ -1,18 +1,36 @@
-var app = angular.module('eplApp',['ngRoute']);
+	var app = angular.module('eplApp',['ngRoute']);
 
 
 
 // First Controller
-app.controller('engPreLea',['$http',function($http){
+app.controller('engPreLea',['$http','$routeParams',function($http,$routeParams){
 
   var main = this;  
   this.datas = [];
   this.baseUrl = 'https://raw.githubusercontent.com/openfootball/football.json/master';
 
+
+  if($routeParams.type == "epl_15_16") {
+	console.log("Hello Harshit");
+	this.type ='/2015-16/en.1.json';
+	console.log(this.type);
+	this.url = this.baseUrl + this.type
+	this.type = "epl_15_16"
+}
+else if ($routeParams.type == "epl_16_17") {
+	console.log("bye Harshit");
+	this.type ='/2016-17/en.1.json';
+	console.log(this.type);
+
+	this.url = this.baseUrl + this.type
+	this.type = "epl_16_17"
+}
+
+
   this.eplData = function(date,tName){
     $http({
       method: 'GET',
-      url: main.baseUrl+'/2015-16/en.1.json'
+      url: main.url
     }).then(function successCallback(response){
 
           main.datas = response.data.rounds;
@@ -41,9 +59,11 @@ var main = this;
 this.datas = [];
 
 this.date = $routeParams.date;
+console.log("saddddddddddddddddddddddddddddddddd");
+console.log($routeParams.type);
 console.log(this.date);
-this.y = $routeParams.matchDetails;
-console.log(this.y);
+//this.y = $routeParams.matchDetails;
+//console.log(this.y);
 this.t1Code = $routeParams.tCode;
 //console.log(this.t1Code);
 
@@ -55,15 +75,28 @@ this.t2;  //team 2
 this.s1;  //score 1
 this.s2;  //score 2
 this.winner;
+console.log("hhh");
+	this.baseUrl = 'https://raw.githubusercontent.com/openfootball/football.json/master';
+if($routeParams.type == "epl_15_16") {
+	console.log("Hello Harshit");
+	this.type ='/2015-16/en.1.json';
+	console.log(this.type);
+}
+else if ($routeParams.type == "epl_16_17") {
+	console.log("bye Harshit");
+	this.type ='/2016-17/en.1.json';
+	console.log(this.type);
+	}
 
-this.baseUrl = 'https://raw.githubusercontent.com/openfootball/football.json/master';
-
+this.url = this.baseUrl + this.type
+console.log(this.url);
 this.winTeam = function(){
   $http({
     method:'GET',
-    url: main.baseUrl+'/2015-16/en.1.json'
+    url: main.baseUrl+main.type
     //console.log(response);
   }).then(function successCallback(response){
+  	console.log(response);
   	console.log("hello");
   	console.log(response.data);
     main.datas = response.data.rounds;
@@ -107,7 +140,7 @@ this.winTeam = function(){
 
 
 app.controller('leagueSummary15_16',['$http','$routeParams',function($http,$routeParams){
-
+console
 var main = this;
 //this.datas = [];
 
@@ -138,14 +171,36 @@ this.teamNames = [];
 this.jsonArr = {
   teamss:[]
 };
+console.log("dsa")
 this.baseUrl = 'https://raw.githubusercontent.com/openfootball/football.json/master';
+  if($routeParams.type == "15_16") {
+	console.log("Heo Harshit");
+	this.type ='/2015-16/en.1.json';
+	console.log(this.type);
+	console.log("sas");
+
+	this.url = this.baseUrl+this.type	
+	this.type="epl_15_16"
+
+}
+else if ($routeParams.type == "16_17") {
+	console.log("bye Harshit");
+	this.type ='/2016-17/en.1.json';
+	console.log(this.type);
+	this.url = this.baseUrl+this.type	
+	this.type = "epl_16_17" 
+}
+
+	
+console.log(this.baseUrl + this.type)
 
 this.statistics = function(){
   $http({
     method:'GET',
-    url: main.baseUrl+'/2015-16/en.1.json'
+    url: main.url
 
   }).then(function successCallback(response){
+  	console.log("hello")
     main.datas = response.data.rounds;
     console.log(main.datas);
     //console.log(main.losses);
@@ -232,7 +287,7 @@ this.statistics = function(){
   },function errorCallback(response){
       console.log("Not Found");
   })
-  console.log(this.jsonArr);
+ // console.log(this.jsonArr);
   //console.log(this.jsonArr.teamss[0].t1code)
 };
 }]);
@@ -250,10 +305,27 @@ this.baseUrl = 'https://raw.githubusercontent.com/openfootball/football.json/mas
 this.jsonArr = {
   teamss:[]
 };
+
+  if($routeParams.type == "epl_15_16") {
+	console.log("Hello Harshit");
+	this.type ='/2015-16/en.1.json';
+	console.log(this.type);
+	this.url = this.baseUrl + this.type
+	this.type = "epl_15_16"
+}
+else if ($routeParams.type == "epl_16_17") {
+	console.log("bye Harshit");
+	this.type ='/2016-17/en.1.json';
+	console.log(this.type);
+
+	this.url = this.baseUrl + this.type
+	this.type = "epl_16_17"
+}
+
 this.teamDetails = function(){
   $http({
     method:'GET',
-    url: main.baseUrl+'/2015-16/en.1.json'
+    url: main.url
 
   }).then(function successCallback(response){
     main.datas = response.data.rounds;
@@ -327,7 +399,7 @@ var main = this;
 
 
 app.controller('secondController',['$http','$routeParams',function($http,$routeParams){
-
+$("15-16").hide();
 var main = this;
 this.datass = [];
 this.date = $routeParams.date;
@@ -375,7 +447,8 @@ this.winTeams = function(){
           }
         }
         else{
-          console.log("Please Enter Correct Input");
+        	//console.log(main.s1);
+          //console.log("Please Enter Correct Input");
         }
       }
     }
