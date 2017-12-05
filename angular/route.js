@@ -21,7 +21,7 @@ angular.module('eplApp').config(function($routeProvider) {
         })
         .when('/epl/:type/league/Summary', {
             templateUrl: 'pages/leagueSummary.html',
-            controller: 'leagueSummary15_16',
+            controller: 'leagueSummary',
             controllerAs: 'teamCtrl'
         })
 

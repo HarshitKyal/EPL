@@ -116,7 +116,7 @@
 
 
 
-  app.controller('leagueSummary15_16', ['$http', '$routeParams', function($http, $routeParams) {
+  app.controller('leagueSummary', ['$http', '$routeParams', function($http, $routeParams) {
 
       var main = this;
 
