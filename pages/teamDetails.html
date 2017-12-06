@@ -20,14 +20,14 @@
       <thead>
          <tr>
             <th  style="text-align: center;"> Match Day </th>
-            <th  style="text-align: center;"> Date </th>
+            <th  class="colHid3" style="text-align: center;"> Date </th>
             <th  style="text-align: center;"> Team 1 </th>
             <th  style="text-align: center;"> Team 2 </th>
          </tr>
       </thead>
       <tbody ng-repeat="data in teamSpe.jsonArr.teamss | filter:matchSearch | filter:team1Search | filter:team2Search | filter:dateSearch" ng-hide="epl1">
          <td > <a ng-href="#!{{teamSpe.type}}/matchDetails/{{data.date}}/{{data.t1code}}/{{data.t2code}}"> {{ data.name }} </a></td>
-         <td> {{ data.date }} </td>
+         <td class="colHid3"> {{ data.date }} </td>
          <td > <a ng-href="#!{{teamSpe.type}}/teamDetails/{{data.t1code}}"> {{ data.t1team }}</td>
          <td>  <a ng-href="#!{{teamSpe.type}}/teamDetails/{{data.t2code}}"> {{ data.t2team }}</td>
          </tr>

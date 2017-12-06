@@ -398,10 +398,12 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #42f48f;
 }
-
+.colHid4{
+  display: none;
+}
 @media only screen and  (max-width : 300px) {
  .table > thead > tr > th {
-      font-size: 0.55em;
+      font-size: 0.50em;
     }
 
     .table td {
@@ -414,7 +416,9 @@ body {
     .colHid2{
       display: none;
     }
-    
+    .colHid1{
+      display: none;
+    }
     .mm{
         font-size: 0.45em;
     }
@@ -432,14 +436,14 @@ h6 {
 
 
 
-@media only screen and (min-width: 300px) and (max-width : 376px) {
+@media only screen and (min-width: 300px) and (max-width : 392px) {
  .table > thead > tr > th {
-      font-size: 0.62em;
+      font-size: 0.58em;
     }
 
     .table td {
 
-    font-size: 0.55em;
+    font-size: 0.50em;
 }
     .colHid3{
       display: none;
@@ -447,7 +451,9 @@ h6 {
     .colHid2{
       display: none;
     }
-    
+    .colHid1{
+      display: none;
+    }
     .mm{
         font-size: 0.45em;
     }
@@ -464,21 +470,28 @@ h6 {
 }
 
 
-@media only screen and (min-width: 376px) and (max-width : 480px) {
+@media only screen and (min-width: 392px) and (max-width : 480px) {
  .table > thead > tr > th {
-			font-size: 0.65em;
+			font-size: 0.60em;
 		}
 
 		.table td {
 
-		font-size: 0.5em;
+		font-size: 0.48em;
 }
+  .colHid4{
+    display:table-cell;
+  }
     .colHid2{
 			display: none;
     }
+    .colHid1{
+      display: none;
+}
+
 
     .mm{
-        font-size: 0.55em;
+        font-size: 0.50em;
     }
     .image{
         height: 100px;width: 125px
@@ -493,7 +506,10 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;font-size: 0.75em;
 }
+
 }
+
+
 @media only screen and (min-width : 481px) and (max-width : 990px) {
 .table > thead > tr > th {
 			font-size: 0.8em;
@@ -506,6 +522,9 @@ h6 {
     .colHid1{
 			display: none;
 }
+  .colHid4{
+    display:table-cell;
+  }
 
         .mm{
         font-size: 0.7em;
