@@ -16,22 +16,22 @@
    </div>
    <!--End of Row-->
    <br>
-   <table class="table table-inverse table-hover table-sm table-condensed table-responsive"  style="text-align: center; background-color: #3B252A;">
+   <table class="table  table-bordered table-hover table-responsive"  style="text-align: center;">
       <thead>
          <tr>
             <th  style="text-align: center;"> Match Day </th>
-            <th  style="text-align: center;"> Date </th>
+            <th class="colHid3" style="text-align: center;"> Date </th>
             <th  style="text-align: center;"> Team 1 </th>
             <th  style="text-align: center;"> Team 2 </th>
          </tr>
       </thead>
       <tbody ng-repeat="data in EPL.datas | filter:matchSearch">
          <tr ng-repeat="match in data.matches | filter:team2Search | filter:team1Search  | filter:dateSearch" ng-hide="epl1">
-            <td style="color:white;"> <a ng-href="#!{{EPL.type}}/matchDetails/{{match.date}}/{{match.team1.code}}/{{match.team2.code}}"> {{ data.name }} </a></td>
-            <td> {{ match.date }} </td>
+            <td > <a ng-href="#!{{EPL.type}}/matchDetails/{{match.date}}/{{match.team1.code}}/{{match.team2.code}}"> {{ data.name }} </a></td>
+            <td class="colHid3"> {{ match.date }} </td>
             <td > <a ng-href="#!{{EPL.type}}/teamDetails/{{match.team1.code}}"> {{ match.team1.name }}</td>
             <td> <a ng-href="#!{{EPL.type}}/teamDetails/{{match.team2.code}}"> {{ match.team2.name }}</td>
-            <td>  </td>
+      
          </tr>
       </tbody>
    </table>

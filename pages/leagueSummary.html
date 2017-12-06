@@ -16,28 +16,36 @@
    </div>
    <!--End of Row-->
    <br>
-   <table class="table table-inverse table-hover table-sm table-condensed table-responsive"  style="text-align: center; background-color: #3B252A;">
+   <table class="table table-hover   table-responsive table-bordered"  style="text-align: center; ">
       <thead>
          <tr>
             <th  style="text-align: center;"> Team </th>
-            <th  style="text-align: center;"> Total Matches </th>
+            <th  class="colHid1 colHid2" style="text-align: center;"> Total Matches </th>
             <th  style="text-align: center;"> draws </th>
-            <th  style="text-align: center;"> Losses </th>
+            <th class="colHid1 colHid2" style="text-align: center;"> Losses </th>
             <th  style="text-align: center;"> wins </th>
-            <th  style="text-align: center;"> Goals Scored </th>
+            <th class="colHid2" style="text-align: center;"> Goals Scored </th>
+            <th  class="colHid3" style="text-align: center;"> Goals Conceded </th>
+
             <th  style="text-align: center;"> Goals Conceded </th>
          </tr>
       </thead>
       <tbody ng-repeat="data in teamCtrl.jsonArr.teamss | filter:team1Search | filter:wins | filter:losses | filter:team1Search | filter:goalScored" ng-hide="epl1"">
-         <td style="color:white;"> <a ng-href="#!{{teamCtrl.type}}/teamDetails/{{data.t1code}}">  {{ data.team }} </a></td>
-         <td> {{ data.totalMatches }} </td>
-         <td style="color:white;"> {{ data.draws }}</td>
-         <td> {{data.losses}}</td>
+         <tr></tr>
+         <td> <a ng-href="#!{{teamCtrl.type}}/teamDetails/{{data.t1code}}">  {{ data.team }} </a></td>
+         <td class="colHid1 colHid2" > {{ data.totalMatches }} </td>
+         <td > {{ data.draws }}</td>
+         <td class="colHid1 colHid2" > {{data.losses}}</td>
          <td> {{data.wins}} </td>
-         <td> {{ data.goalScored }}</td>
-         <td> {{data.goalsConceded}} </td>
+         <td class="colHid2" > {{ data.goalScored }}</td>
+         <td class="colHid3"> {{data.goalsConceded}} </td>
+          <td> {{data.wins}} </td>
          </tr>
       </tbody>
    </table>
 </div>
 <!--End of Container-->
+
+
+
+  

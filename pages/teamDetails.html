@@ -16,7 +16,7 @@
    </div>
    <!--End of Row-->
    <br>
-   <table class="table table-inverse table-hover table-sm table-condensed table-responsive"  style="text-align: center; background-color: #3B252A;">
+   <table class="table table-bordered table-hover  table-responsive"  style="text-align: center; ">
       <thead>
          <tr>
             <th  style="text-align: center;"> Match Day </th>
@@ -26,9 +26,9 @@
          </tr>
       </thead>
       <tbody ng-repeat="data in teamSpe.jsonArr.teamss | filter:matchSearch | filter:team1Search | filter:team2Search | filter:dateSearch" ng-hide="epl1">
-         <td style="color:white;"> <a ng-href="#!{{teamSpe.type}}/matchDetails/{{data.date}}/{{data.t1code}}/{{data.t2code}}"> {{ data.name }} </a></td>
+         <td > <a ng-href="#!{{teamSpe.type}}/matchDetails/{{data.date}}/{{data.t1code}}/{{data.t2code}}"> {{ data.name }} </a></td>
          <td> {{ data.date }} </td>
-         <td style="color:white;"> <a ng-href="#!{{teamSpe.type}}/teamDetails/{{data.t1code}}"> {{ data.t1team }}</td>
+         <td > <a ng-href="#!{{teamSpe.type}}/teamDetails/{{data.t1code}}"> {{ data.t1team }}</td>
          <td>  <a ng-href="#!{{teamSpe.type}}/teamDetails/{{data.t2code}}"> {{ data.t2team }}</td>
          </tr>
       </tbody>
