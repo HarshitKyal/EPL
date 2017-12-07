@@ -1,15 +1,11 @@
 
-
-
-
-
 <div class="row">
    <div class=" col-md-12 text-center">
       <h3 class="colHid1 colHid2"> {{ firstCtrl.matchDay }}</h3>
       <h3> {{ firstCtrl.date }}</h3>
    </div>
    <div class="col-xs-4 col-md-4">
-      <img ng-src = "logo/{{ firstCtrl.t1Code}}.png" class="img-responsive" style="height:auto;width:440px">
+      <img ng-src = "images/{{ firstCtrl.t1Code}}.png" class="img-responsive" style="height:auto;width:440px">
       <h4 class="text-center">{{ firstCtrl.t1 }}</h4>
       <h5 class="text-center"> Goals : {{ firstCtrl.s1 }}</h5>
    </div>
@@ -18,7 +14,7 @@
       <span class="colHid1 colHid2"><img src="logo/vs.png" style="height:50px;width:50px "></span>
    </div>
    <div class="col-xs-4 col-md-4">
-      <img ng-src = "logo/{{ firstCtrl.t2Code}}.png" class="img-responsive" style="height:auto;width:440px">
+      <img ng-src = "images/{{ firstCtrl.t2Code}}.png" class="img-responsive" style="height:auto;width:440px">
       <h4 class="text-center">{{ firstCtrl.t2 }}</h4>
       <h5 class="text-center">Goals : {{ firstCtrl.s2 }}</h5>
    </div>
@@ -30,6 +26,7 @@
 </div>
 <div class="row">
    <div class="col-xs-12 text-center" style="margin-top: 15px;">
-      <button type="button" class="button" ng-click="firstCtrl.navigateBack()">Back to table</button>
+      <p><button class="w3-button w3-blue w3-round-xxlarge" onclick="window.history.back();">back</button></p>
+
    </div>
 </div>

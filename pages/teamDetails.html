@@ -1,17 +1,17 @@
 <h4 style="text-align: center; padding-top: 20px;">Filter Result By using Search Boxes</h4>
 <div class="container" ng-controller="teamSpecific as teamSpe" ng-init="teamSpe.teamDetails()">
    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...Matchday 2" ng-model="matchSearch"/>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-4">
+         <input type="text" class="form-control" placeholder="Matchday 2" ng-model="matchSearch.name"/>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...Liverpool" ng-model="team1Search" />      
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-4">
+         <input type="text" class="form-control" placeholder="Liverpool" ng-model="team1Search.team1.name" />      
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...Manchester United" ng-model="team2Search" />      
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-4">
+         <input type="text" class="form-control" placeholder="Manchester United" ng-model="team2Search.team1.name" />      
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...2015-08-08" ng-model="dateSearch" />
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-4">
+         <input type="text" class="form-control colHid3" placeholder="2015-08-08" ng-model="dateSearch.date" />
       </div>
    </div>
    <!--End of Row-->

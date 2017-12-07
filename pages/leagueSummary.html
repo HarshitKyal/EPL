@@ -1,17 +1,26 @@
 <div  ng-controller="leagueSummary as teamCtrl" ng-init="teamCtrl.statistics()" >
    <h4 style="text-align: center; padding-top: 20px;">Filter Result By using Search Boxes</h4>
    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-4">
          <input type="text" class="form-control" placeholder="Team" ng-model="team1Search.team" />      
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-4">
          <input type="text" class="form-control" placeholder="Wins" ng-model="wins.wins" />      
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Losses" ng-model="losses.losses" />
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-4">
+         <input  type="text" class="form-control colHid3" placeholder="Losses" ng-model="losses.losses" />
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Goals Scored" ng-model="goalScored.goalScored" />
+   
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-4">
+         <input  type="text" class="form-control colHid3" placeholder="Draws" ng-model="draws.draws" />
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-4">
+         <input  type="text" class="form-control colHid1" placeholder="Goals Scored" ng-model="goalScored.goalScored" />
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-4">
+         <input  type="text" class="form-control colHid1" placeholder="Goals Conceded" ng-model="goalsConceded.goalsConceded" />
       </div>
    </div>
    <!--End of Row-->
@@ -31,7 +40,7 @@
             <th  class="colHid1" style="text-align: center;"> Win % </th>
          </tr>
       </thead>
-      <tbody ng-repeat="data in teamCtrl.jsonArr.teamss | filter:team1Search | filter:wins | filter:losses | filter:team1Search | filter:goalScored" ng-hide="epl1"">
+      <tbody ng-repeat="data in teamCtrl.jsonArr.teamss | filter:team1Search | filter:wins | filter:losses | filter:team1Search | filter:goalScored | filter:goalsConceded | filter:draws" ng-hide="epl1"">
          <tr></tr>
          <td> <a ng-href="#!{{teamCtrl.type}}/teamDetails/{{data.t1code}}">  {{ data.team }} </a></td>
          <td  > {{ data.totalMatches }} </td>

@@ -1,17 +1,17 @@
 <div  ng-init="EPL.eplData()">
    <h4 style="text-align: center; padding-top: 20px;">Filter Result By using Search Boxes</h4>
    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...Matchday 2" ng-model="matchSearch.name"/>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 mt-4">
+         <input type="text" class="form-control" placeholder="Matchday 2" ng-model="matchSearch.name"/>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...Liverpool" ng-model="team1Search.team1.name" />      
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 mt-4">
+         <input type="text" class="form-control" placeholder="Liverpool" ng-model="team1Search.team1.name" />      
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...Manchester United" ng-model="team2Search.team1.name" />      
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 mt-4">
+         <input type="text" class="form-control " placeholder="Manchester United" ng-model="team2Search.team1.name" />      
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="Ex...2015-08-08" ng-model="dateSearch.date" />
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 mt-4">
+         <input type="text" class="form-control colHid3" placeholder="2015-08-08" ng-model="dateSearch.date" />
       </div>
    </div>
    <!--End of Row-->
@@ -23,7 +23,7 @@
             <th class="colHid3" style="text-align: center;"> Date </th>
             <th  style="text-align: center;"> Team 1 </th>
             <th  style="text-align: center;"> Team 2 </th>
-            <th style="text-align: center;"> Winner </th>
+            <th class = "colHid2" style="text-align: center;"> Winner </th>
          </tr>
       </thead>
       <tbody ng-repeat="data in EPL.datas | filter:matchSearch">

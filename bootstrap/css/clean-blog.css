@@ -408,7 +408,7 @@ body {
 
     .table td {
 
-    font-size: 0.52em;
+    font-size: 0.47em;
 }
     .colHid3{
       display: none;
@@ -473,12 +473,12 @@ h6 {
 
 @media only screen and (min-width: 392px) and (max-width : 480px) {
  .table > thead > tr > th {
-			font-size: 0.60em;
+			font-size: 0.55em;
 		}
 
 		.table td {
 
-		font-size: 0.48em;
+		font-size: 0.45em;
 }
   .colHid4{
     display:table-cell;
@@ -511,7 +511,7 @@ h6 {
 
 @media only screen and (min-width : 481px) and (max-width : 768px) {
 .table > thead > tr > th {
-			font-size: 0.8em;
+			font-size: 0.72em;
 		}
 
 		.table td {
