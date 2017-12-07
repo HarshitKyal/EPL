@@ -63,6 +63,7 @@
 
       this.t2Code = $routeParams.tCode2;
 
+      this.matchDay ;
       this.t1; //team 1 
       this.t2; //team 2
       this.s1; //score 1
@@ -88,10 +89,11 @@
               for (var i in main.datas) {
                   for (var j in main.datas[i].matches) {
 
+                      //console.log(main.datas[i].matches);
                       if (main.datas[i].matches[j].team1.code == main.t1Code && main.datas[i].matches[j].team2.code == main.t2Code && main.datas[i].matches[j].date == main.date) {
                           main.s1 = main.datas[i].matches[j].score1;
                           main.s2 = main.datas[i].matches[j].score2;
-
+                          main.matchDay = main.datas[i].name;
                           main.t1 = main.datas[i].matches[j].team1.name;
                           main.t2 = main.datas[i].matches[j].team2.name;
 
