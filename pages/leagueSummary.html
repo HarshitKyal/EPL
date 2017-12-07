@@ -22,13 +22,13 @@
             <th  style="text-align: center;"> Teams </th>
             <th  style="text-align: center;"> Total Matches </th>
             <th  style="text-align: center;"> Wins </th>
-            <th class="colHid1 colHid2" style="text-align: center;"> Losses </th>
-            <th class="colHid4" style="text-align: center;"> Goals Scored/Conceded </th>
-            <th  style="text-align: center;"> Draws </th>
-            <th class="colHid1" style="text-align: center;"> Goals Scored </th>
+            <th  style="text-align: center;"> Losses </th>
+            <!-- <th class="colHid4" style="text-align: center;"> Goals Scored/Conceded </th>
+          -->  <th  class="colHid3" style="text-align: center;"> Draws </th>
+            <th class="colHid2" style="text-align: center;"> Goals Scored </th>
             <th  class="colHid1" style="text-align: center;"> Goals Conceded </th>
 
-            <th  class="colHid1 colHid2" style="text-align: center;"> Win % </th>
+            <th  class="colHid1" style="text-align: center;"> Win % </th>
          </tr>
       </thead>
       <tbody ng-repeat="data in teamCtrl.jsonArr.teamss | filter:team1Search | filter:wins | filter:losses | filter:team1Search | filter:goalScored" ng-hide="epl1"">
@@ -36,13 +36,13 @@
          <td> <a ng-href="#!{{teamCtrl.type}}/teamDetails/{{data.t1code}}">  {{ data.team }} </a></td>
          <td  > {{ data.totalMatches }} </td>
          <td > {{ data.wins }}</td>
-         <td class="colHid4" > {{data.losses}}</td>
+        <!-- <td class="colHid4" > {{data.losses}}</td>
          
-         <td class="colHid1 colHid2" > {{data.losses}}</td>
-         <td> {{data.draws}} </td>
-         <td class="colHid1" > {{ data.goalScored }}</td>
+        --> <td  > {{data.losses}}</td>
+         <td class="colHid3"> {{data.draws}} </td>
+         <td class="colHid2" > {{ data.goalScored }}</td>
          <td class="colHid1"> {{data.goalsConceded}} </td>
-          <td class="colHid1 colHid2"> {{(data.wins/data.totalMatches)*100  |  number : 2}} </td>
+          <td class="colHid1"> {{(data.wins/data.totalMatches)*100  |  number : 2}} </td>
          </tr>
       </tbody>
    </table>

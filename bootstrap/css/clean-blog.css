@@ -401,14 +401,14 @@ body {
 .colHid4{
   display: none;
 }
-@media only screen and  (max-width : 300px) {
+@media only screen and  (max-width : 338px) {
  .table > thead > tr > th {
       font-size: 0.50em;
     }
 
     .table td {
 
-    font-size: 0.45em;
+    font-size: 0.55em;
 }
     .colHid3{
       display: none;
@@ -436,7 +436,7 @@ h6 {
 
 
 
-@media only screen and (min-width: 300px) and (max-width : 392px) {
+@media only screen and (min-width: 338px) and (max-width : 392px) {
  .table > thead > tr > th {
       font-size: 0.58em;
     }
@@ -445,9 +445,7 @@ h6 {
 
     font-size: 0.50em;
 }
-    .colHid3{
-      display: none;
-    }
+
     .colHid2{
       display: none;
     }
@@ -482,9 +480,7 @@ h6 {
   .colHid4{
     display:table-cell;
   }
-    .colHid2{
-			display: none;
-    }
+
     .colHid1{
       display: none;
 }
