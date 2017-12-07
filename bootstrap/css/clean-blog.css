@@ -408,7 +408,7 @@ body {
 
     .table td {
 
-    font-size: 0.55em;
+    font-size: 0.52em;
 }
     .colHid3{
       display: none;
@@ -438,12 +438,12 @@ h6 {
 
 @media only screen and (min-width: 338px) and (max-width : 392px) {
  .table > thead > tr > th {
-      font-size: 0.58em;
+      font-size: 0.54em;
     }
 
     .table td {
 
-    font-size: 0.55em;
+    font-size: 0.50em;
 }
 
     .colHid2{
@@ -454,6 +454,9 @@ h6 {
     }
     .mm{
         font-size: 0.45em;
+    }
+        .image{
+        height: 50px;width: 50px
     }
 
 h1,    
@@ -506,7 +509,7 @@ h6 {
 }
 
 
-@media only screen and (min-width : 481px) and (max-width : 990px) {
+@media only screen and (min-width : 481px) and (max-width : 768px) {
 .table > thead > tr > th {
 			font-size: 0.8em;
 		}
@@ -525,10 +528,9 @@ h6 {
         .mm{
         font-size: 0.7em;
     }
-    .image{
+      .image{
         height: 200px;width: 250px
     }
-h1,    
 h2,
 h3,
 h4,

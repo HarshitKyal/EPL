@@ -1,26 +1,26 @@
-<div class="container" ng-controller="leagueSummary as teamCtrl" ng-init="teamCtrl.statistics()" >
+<div  ng-controller="leagueSummary as teamCtrl" ng-init="teamCtrl.statistics()" >
    <h4 style="text-align: center; padding-top: 20px;">Filter Result By using Search Boxes</h4>
    <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="by team" ng-model="team1Search" />      
+         <input type="text" class="form-control" placeholder="Team" ng-model="team1Search.team" />      
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="by wins" ng-model="wins" />      
+         <input type="text" class="form-control" placeholder="Wins" ng-model="wins.wins" />      
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="by losses" ng-model="losses" />
+         <input type="text" class="form-control" placeholder="Losses" ng-model="losses.losses" />
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-4 mt-4">
-         <input type="text" class="form-control" placeholder="by goalsScored" ng-model="goalScored" />
+         <input type="text" class="form-control" placeholder="Goals Scored" ng-model="goalScored.goalScored" />
       </div>
    </div>
    <!--End of Row-->
    <br>
-   <table class="table table-hover   table-responsive table-bordered"  style="text-align: center; ">
+   <table class="table table-responsive table-bordered"  style="text-align: center; ">
       <thead>
          <tr>
             <th  style="text-align: center;"> Teams </th>
-            <th  style="text-align: center;"> Total Matches </th>
+            <th  style="text-align: center;"> Matches </th>
             <th  style="text-align: center;"> Wins </th>
             <th  style="text-align: center;"> Losses </th>
             <!-- <th class="colHid4" style="text-align: center;"> Goals Scored/Conceded </th>

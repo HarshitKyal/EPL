@@ -111,6 +111,7 @@
               console.log("Not Found");
           })
       };
+      this.winTeam();
   }]);
 
 

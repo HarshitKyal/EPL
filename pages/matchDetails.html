@@ -1,37 +1,35 @@
-<div class="container" ng-controller="matchDetails as firstCtrl" ng-init="firstCtrl.winTeam()">
-   <br>
-   <div class="w3-container">
-      <p><button class="w3-button w3-blue w3-round-xxlarge" onclick="window.history.back();">back</button></p>
+
+
+
+
+
+<div class="row">
+   <div class=" col-md-12 text-center">
+      <h3 class="colHid1 colHid2"> {{ firstCtrl.matchDay }}</h3>
+      <h3> {{ firstCtrl.date }}</h3>
    </div>
-   <div class="row mt-2">
-      <!-- Team 1  -->
-      <div class="col-lg-4 col-sm-4 col-xs-12 card mb-3">
-         <img class="card-img-top mt-2" ng-src="images/{{firstCtrl.t1Code | uppercase}}.png" style="height: 24em;width: auto;" alt="Card image cap">
-         <div class="card-block">
-            <br>
-            <h4 class="card-title" style="text-align: center;">{{firstCtrl.t1}}</h4>
-         </div>
-      </div>
-      <!-- Match Statistics -->
-      <div class="col-lg-4 col-sm-4 col-xs-12 card mb-3" style="text-align: center; ">
-         <div class="card-block">
-            <h4 class="card-title" style="margin-top: 100px;">Match Statistics</h4>
-            <hr>
-            <p>{{firstCtrl.date}}</p>
-            <h3>Goals</h3>
-            <br>
-            <h4><strong>{{firstCtrl.s1}} - {{firstCtrl.s2}}</strong></h4>
-            <br>
-            <h3><strong>"{{firstCtrl.winner}}"</strong></h3>
-         </div>
-      </div>
-      <!-- Team 2 -->
-      <div class="col-lg-4 col-sm-4 col-xs-12 card mb-3">
-         <img class="card-img-top mt-2" ng-src="images/{{firstCtrl.t2Code | uppercase}}.png" style="height: 24em;width: auto;" alt="Card image cap">
-         <div class="card-block">
-            <br>
-            <h4 class="card-title" style="text-align: center;">{{firstCtrl.t2}}</h4>
-         </div>
-      </div>
+   <div class="col-xs-4 col-md-4">
+      <img ng-src = "logo/{{ firstCtrl.t1Code}}.png" class="img-responsive" style="height:auto;width:440px">
+      <h4 class="text-center">{{ firstCtrl.t1 }}</h4>
+      <h5 class="text-center"> Goals : {{ firstCtrl.s1 }}</h5>
+   </div>
+   <div class="col-xs-4 col-md-4 col-sm-4 text-center">
+      <br/><br/><br/>
+      <span class="colHid1 colHid2"><img src="logo/vs.png" style="height:50px;width:50px "></span>
+   </div>
+   <div class="col-xs-4 col-md-4">
+      <img ng-src = "logo/{{ firstCtrl.t2Code}}.png" class="img-responsive" style="height:auto;width:440px">
+      <h4 class="text-center">{{ firstCtrl.t2 }}</h4>
+      <h5 class="text-center">Goals : {{ firstCtrl.s2 }}</h5>
+   </div>
+</div>
+<div class="row">
+   <div class="col-xs-12">
+      <h2 class="text-center">{{ firstCtrl.winner }}</h2>
+   </div>
+</div>
+<div class="row">
+   <div class="col-xs-12 text-center" style="margin-top: 15px;">
+      <button type="button" class="button" ng-click="firstCtrl.navigateBack()">Back to table</button>
    </div>
 </div>

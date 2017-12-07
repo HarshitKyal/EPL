@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html ng-app="eplApp">
    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>English Premier League</title>
       <!-- Bootstrap css -->
+      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      
       <link href="bootstrap/css/clean-blog.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link href="bootstrap/css/clean-blog.css" rel="stylesheet">
+      
       <!-- ion font css -->
       <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
       <!--  w3 schools css -->
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link href="bootstrap/css/clean-blog.css" rel="stylesheet">
-      
+       <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+     
       <style media="screen">
          header{
          margin: 0 !important;
@@ -24,20 +30,29 @@
       </style>
    </head>
    <body>
-      <!-- Navigation Bar -->
-      <nav class="navbar  navbar-expand-lg navbar-dark bg-dark" id="navImg">
-         <a class="navbar-brand headline" ng-href="index.html">English Premier League</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item active">
-                  <a class="nav-link" href="index.html"><span class="ion-android-home"></span> &nbsp;Home</a>
-               </li>
-            </ul>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               Menu <i class="fa fa-bars"></i>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                  <li>
+                     <a href="index.html">Home</a>
+                  </li>
+          
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
          </div>
+         <!-- /.container -->
       </nav>
+
       <!-- Page Header -->
       <!-- Set your background image for this header on the line below. -->
       <header class="intro-header " style="background-image: url('images/index-bg.jpg')">
@@ -79,7 +94,7 @@
       </div>
       <!-- End of main content -->
       <!-- View part -->
-      <div ng-view>
+      <div class="container-fluid" ng-view>
       </div>
       <!-- End of view port -->
       <hr>
@@ -101,6 +116,9 @@
       <script type="text/javascript" src="angular/app.js"></script>
       <!-- pooper javascript -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://code.angularjs.org/1.6.0/angular-route.min.js"></script>
+      <script src="angular/angular.min.js"></script>
+      
       <!-- bootsrtap javascript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
       <script type="text/javascript" src="angular/route.js"></script>
