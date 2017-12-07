@@ -420,9 +420,11 @@ body {
       display: none;
     }
     .mm{
-        font-size: 0.45em;
+        font-size: 0.35em;
     }
-
+    .mt-2{
+      
+    }
 h1,    
 h2,
 h3,
@@ -560,7 +562,7 @@ h6 {
   align-content: center;
 }
 .button {
-    background-color: #42f495;
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -568,4 +570,18 @@ h6 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+.button1 {
+    background-color: #e6eeff; /* Green */
+    border: none;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
 }
